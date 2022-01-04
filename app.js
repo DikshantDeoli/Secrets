@@ -2,15 +2,17 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-// const bcrypt = require('bcrypt')
-// const saltRounds = 10;
 const passport = require('passport')
 const session = require('express-session')
 const passportLocalMongoose = require('passport-local-mongoose')
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const FacebookStrategy = require('passport-facebook')
 const findOrCreate = require('mongoose-findorcreate')
-const e = require('express')
+// const bcrypt = require('bcrypt')
+// const saltRounds = 10;
+
+
+
 
 const app = express()
 app.use(session({
@@ -34,7 +36,6 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err) => {
         console.log('Connnected to DataBase')
     }
 })
-
 
 
 
